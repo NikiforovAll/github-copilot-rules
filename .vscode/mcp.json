@@ -24,17 +24,6 @@
       "type": "http",
       "url": "https://learn.microsoft.com/api/mcp"
     },
-    "deepwiki": {
-      "type": "sse",
-      "url": "https://api.deepwiki.com/mcp/sse"
-    },
-    "sequential-thinking": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
-    },
     "playwright": {
       "command": "npx",
       "args": [
