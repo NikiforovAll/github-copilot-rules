@@ -54,7 +54,7 @@ Consider using [spec-kit](https://github.com/github/spec-kit) for structured spe
 
 💡 Be very direct and explicit with the way you want to interact. E.g.: "give me 3 results and compare pros and cons for each result using markdown tables"
 
-💡 For common tasks, you can create reusable [prompts](/category/patterns) to describe your problem-solving approach. See [pros-and-cons](/customizations/patterns/pros-and-cons) for an example.
+💡 For common tasks, you can create reusable [prompts](/category/prompts) to describe your problem-solving approach. See [pros-and-cons](/customizations/prompts/pros-and-cons) for an example.
 
 ## 2. Context Engineering
 
@@ -117,9 +117,9 @@ Prompts are reusable templates for common tasks.
 | `.vscode/prompts/*.prompt.md` | IDE-specific prompts |
 
 **Examples in this repo:**
-- [code-review](/customizations/patterns/code-review) - Code review workflow
-- [new-idea](/customizations/patterns/new-idea) - Idea exploration
-- [pros-and-cons](/customizations/patterns/pros-and-cons) - Decision analysis
+- [code-review](/customizations/prompts/code-review) - Code review workflow
+- [new-idea](/customizations/prompts/new-idea) - Idea exploration
+- [pros-and-cons](/customizations/prompts/pros-and-cons) - Decision analysis
 
 ### 3.3. Agents
 
