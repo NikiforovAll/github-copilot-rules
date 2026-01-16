@@ -1,0 +1,35 @@
+---
+title: "Debug Agent"
+sidebar_position: 1
+---
+
+import DebugAgentSource from '!!raw-loader!../../../../.github/agents/debug.agent.md'
+import CodeBlock from '@theme/CodeBlock';
+
+# Debug Agent
+
+A systematic debugging agent that helps identify, analyze, and resolve bugs in your application.
+
+## Overview
+
+The Debug Agent follows a structured 4-phase debugging process:
+
+1. **Problem Assessment**: Gather context, reproduce the bug
+2. **Investigation**: Root cause analysis, hypothesis formation
+3. **Resolution**: Implement fix, verification
+4. **Quality Assurance**: Code quality review, final report
+
+## Available Tools
+
+The agent has access to:
+- `edit/editNotebook`, `edit/newJupyterNotebook`
+- `runNotebooks`, `search`, `runCommands`, `runTasks`
+- `usages`, `problems`, `testFailure`
+- `openSimpleBrowser`, `fetch`, `githubRepo`
+- `todos`, `runSubagent`
+
+## Agent Source
+
+<CodeBlock language="markdown">
+{DebugAgentSource}
+</CodeBlock>

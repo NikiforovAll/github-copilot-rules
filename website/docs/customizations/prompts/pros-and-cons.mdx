@@ -1,0 +1,35 @@
+---
+title: "Pros and Cons Analysis"
+sidebar_position: 3
+---
+
+import ProsConsSource from '!!raw-loader!../../../../.vscode/prompts/pros-and-cons.prompt.md'
+import CodeBlock from '@theme/CodeBlock';
+
+# Pros and Cons Analysis Prompt
+
+A structured prompt for evaluating solutions with comprehensive pros/cons analysis.
+
+## Overview
+
+This prompt enables GitHub Copilot to:
+
+- Analyze proposed solutions for strengths and weaknesses
+- Consider alternative approaches
+- Highlight best practices and common pitfalls
+- Provide security-focused insights
+
+## Visual Indicators
+
+The analysis uses emojis for clarity:
+- ✅ Pros
+- ❌ Cons
+- ✨ Best practices
+- ☝️ Common pitfalls
+- 🔒 Security considerations
+
+## Prompt Source
+
+<CodeBlock language="markdown">
+{ProsConsSource}
+</CodeBlock>

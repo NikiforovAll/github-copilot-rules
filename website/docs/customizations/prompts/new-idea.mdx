@@ -1,0 +1,37 @@
+---
+title: "New Idea Proposal"
+sidebar_position: 2
+---
+
+import NewIdeaSource from '!!raw-loader!../../../../.vscode/prompts/new-idea.prompt.md'
+import CodeBlock from '@theme/CodeBlock';
+
+# New Idea Proposal Prompt
+
+A collaborative prompt for transforming app ideas into structured, actionable proposals.
+
+## Overview
+
+This prompt helps you work with GitHub Copilot to:
+
+1. **Clarify** areas that need more details
+2. **Suggest** new requirements based on functionality
+3. **Consider** edge cases
+4. **Organize** requirements into user stories
+5. **Raise** high-level technical considerations
+
+## Output Structure
+
+The final proposal includes:
+- Product Overview (value proposition, target audience)
+- Functional Specifications (numbered requirements)
+- Technical Specifications (architecture, frameworks)
+- MVP Scope
+- Business Model
+- Marketing Plan
+
+## Prompt Source
+
+<CodeBlock language="markdown">
+{NewIdeaSource}
+</CodeBlock>

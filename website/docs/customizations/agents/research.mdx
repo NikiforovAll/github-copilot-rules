@@ -1,0 +1,38 @@
+---
+title: "Research Agent"
+sidebar_position: 2
+---
+
+import ResearchAgentSource from '!!raw-loader!../../../../.github/agents/research.agent.md'
+import CodeBlock from '@theme/CodeBlock';
+
+# Research Agent
+
+A comprehensive research agent that conducts in-depth research with source analysis and synthesis.
+
+## Overview
+
+The Research Agent is responsible for:
+
+- Gathering information from authoritative sources
+- Recursively exploring linked resources
+- Analyzing findings critically
+- Synthesizing well-cited responses
+
+**Important**: This agent is solely for research - it never implements solutions.
+
+## Workflow
+
+1. **Research Execution**: Formulate queries, perform searches, recursive exploration
+2. **Analysis**: Evaluate credibility, cross-reference facts, synthesize findings
+3. **Presentation**: Present findings with clear citations
+
+## Handoffs
+
+The agent can hand off to save research findings to a markdown file.
+
+## Agent Source
+
+<CodeBlock language="markdown">
+{ResearchAgentSource}
+</CodeBlock>

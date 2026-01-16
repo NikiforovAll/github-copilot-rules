@@ -1,0 +1,8 @@
+{
+  "label": "Instructions",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Custom instructions for GitHub Copilot."
+  }
+}

@@ -1,0 +1,32 @@
+---
+title: "Code Review"
+sidebar_position: 1
+---
+
+import CodeReviewSource from '!!raw-loader!../../../../.vscode/prompts/code-review.prompt.md'
+import CodeBlock from '@theme/CodeBlock';
+
+# Code Review Prompt
+
+A comprehensive prompt for performing detailed code reviews with structured feedback.
+
+## Overview
+
+This prompt enables GitHub Copilot to act as a senior software engineer performing code reviews with focus on:
+
+- **Critical Issues**: Security vulnerabilities, runtime errors, performance bottlenecks, memory management, threading issues
+- **Code Quality**: Language conventions, design patterns, code organization, naming, documentation, test coverage
+- **Maintainability**: Code duplication, complexity metrics, dependencies, extensibility, technical debt
+
+## Usage
+
+Use this prompt when reviewing git diffs or pull requests. The review output includes:
+- Prioritized suggestions with emojis (🔥 Critical, ⚠️ High, 🟡 Medium, 🟢 Low)
+- Review type indicators (🔧 Change, ❓ Question, ⛏️ Nitpick, ♻️ Refactor, etc.)
+- Specific file paths and code examples
+
+## Prompt Source
+
+<CodeBlock language="markdown">
+{CodeReviewSource}
+</CodeBlock>

@@ -1,0 +1,32 @@
+---
+title: "Q&A Session"
+sidebar_position: 4
+---
+
+import QASource from '!!raw-loader!../../../../.vscode/prompts/qa.prompt.md'
+import CodeBlock from '@theme/CodeBlock';
+
+# Q&A Session Prompt
+
+A focused prompt for conducting structured yes/no question sessions to clarify requirements.
+
+## Overview
+
+This prompt enables GitHub Copilot to:
+
+- Ask targeted yes/no questions to understand your needs
+- Provide more accurate recommendations based on answers
+- Follow best practices and avoid common pitfalls
+
+## How It Works
+
+- Questions are asked in batches of 5
+- Clear and concise questions only
+- Waits for your answers before proceeding
+- Ensures all questions are relevant to the topic
+
+## Prompt Source
+
+<CodeBlock language="markdown">
+{QASource}
+</CodeBlock>
