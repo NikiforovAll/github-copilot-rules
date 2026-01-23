@@ -4,6 +4,25 @@
     "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
   "chat.useAgentsMdFile": true,
+  "chat.tools.terminal.enableAutoApprove": true,
+  "chat.tools.terminal.autoApprove": {
+    "rg": true,
+    "grep": true,
+    "fd": true,
+    "find": true,
+    "git status": true,
+    "git diff": true,
+    "git log": true,
+    "git show": true,
+    "ls": true,
+    "cat": true,
+    "pwd": true,
+    "head": true,
+    "tail": true,
+    "mkdir": true,
+    "wc": true,
+    "echo": true
+  },
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
       "file": ".github/instructions/git-message.instructions.md"
@@ -20,5 +39,6 @@
   ],
   "chat.useAgentSkills": true,
   "chat.useNestedAgentsMdFiles": true,
-  "chat.customAgentInSubagent.enabled": true
+  "chat.customAgentInSubagent.enabled": true,
+  "github.copilot.chat.anthropic.thinking.budgetTokens": 25000
 }
