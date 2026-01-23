@@ -5,11 +5,22 @@ A collection of [GitHub Copilot AI rules](https://code.visualstudio.com/docs/cop
 > [!TIP]
 > You can enhance Copilot's chat responses by providing it with contextual details about your team's workflow, tools, or project specifics.
 
-## 📚 Customizations: Instructions, Prompts, MCPs, etc.
+## 📚 Customizations
 
-This set of rules is a good starting point and should be customized to fit your specific needs. You can add or remove rules as necessary.
+This set of rules is a good starting point and should be customized to fit your specific needs.
 
 Additionally, you can check [Awesome Copilot Repo](https://github.com/github/awesome-copilot) for more inspiration.
+
+### Structure
+
+```
+.github/
+├── instructions/      # Path-specific instructions (applyTo patterns)
+├── prompts/           # Reusable prompts for common tasks
+├── agents/            # Custom agent profiles
+└── skills/            # Agent Skills (auto-loaded by context)
+AGENTS.md              # Workspace-wide instructions
+```
 
 ### 💻 .NET Development
 
@@ -20,12 +31,20 @@ Rules for writing clean, maintainable C# code:
 - 🛡️ Error handling
 - 🔌 Dependency management
 
-* Code-generation instructions - [csharp/coding-guidelines.md](.vscode/instructions/coding-guidelines.instructions.md), [csharp/coding-style.md](.vscode/instructions/coding-style.instructions.md)
-* Test-generation instructions -  [csharp/testing-xunit.md](.vscode/instructions/testing-xunit.instructions.md)
+* Code-generation instructions - [coding-guidelines](.github/instructions/coding-guidelines.instructions.md), [coding-style](.github/instructions/coding-style.instructions.md)
+* Test-generation instructions -  [testing-xunit](.github/instructions/testing-xunit.instructions.md)
+* Code review instructions - [code-review](.github/instructions/code-review.instructions.md)
 
-### ⏳ [Git](.vscode/git-message.instructions.md)
+### ⏳ Git
 
-* Commit message generation instructions - [git-message.md](.vscode/git-message.instructions.md)
+* Commit message generation instructions - [git-message](.github/instructions/git-message.instructions.md)
+
+### 🛠️ Agent Skills
+
+* [research](.github/skills/research/SKILL.md) - Comprehensive in-depth research
+* [dotnet-run-file](.github/skills/dotnet-run-file/SKILL.md) - Run C# scripts without projects
+* [dotnet-test](.github/skills/dotnet-test/SKILL.md) - Run .NET tests with xUnit focus
+* [dotnet-dependency](.github/skills/dotnet-dependency/SKILL.md) - Investigate .NET project dependencies
 
 ### Tools
 
@@ -48,38 +67,28 @@ npx @modelcontextprotocol/inspector --config .vscode/.mcp.json --server microsof
 
 ## How to Use This Repository
 
-Copy the relevant instructions you want to use into your project's `.vscode/instructions` directory and configure `github.copilot.chat.codeGeneration.instructions` if needed.
+Copy the relevant files to your project's `.github/` directory. Modern Copilot uses standard locations:
 
-Here is an example of how to set up your `.vscode/settings.json` file:
+- `.github/instructions/` - Path-specific instructions
+- `.github/prompts/` - Reusable prompts
+- `.github/skills/` - Agent Skills
+- `AGENTS.md` - Workspace-wide instructions
+
+Minimal `.vscode/settings.json`:
 
 ```json
 {
-  "chat.promptFiles": true,
-  "chat.promptFilesLocations": {
-    ".vscode/prompts": true
-  },
-  "chat.instructionsFilesLocations": {
-    ".vscode/instructions": true
-  },
-  "github.copilot.chat.codeGeneration.instructions": [],
+  "chat.useAgentsMdFile": true,
   "github.copilot.chat.commitMessageGeneration.instructions": [
-    {
-      "file": ".vscode/git-message.instructions.md"
-    }
+    { "file": ".github/instructions/git-message.instructions.md" }
   ],
   "github.copilot.chat.reviewSelection.enabled": true,
   "github.copilot.chat.reviewSelection.instructions": [
-    {
-      "file": ".vscode/instructions/coding-guidelines.instructions.md"
-    },
-    {
-      "file": ".vscode/instructions/coding-style.instructions.md"
-    }
+    { "file": ".github/instructions/coding-guidelines.instructions.md" },
+    { "file": ".github/instructions/coding-style.instructions.md" }
   ],
   "github.copilot.chat.testGeneration.instructions": [
-    {
-      "file": ".vscode/instructions/testing-xunit.instructions.md"
-    }
+    { "file": ".github/instructions/testing-xunit.instructions.md" }
   ]
 }
 ```
