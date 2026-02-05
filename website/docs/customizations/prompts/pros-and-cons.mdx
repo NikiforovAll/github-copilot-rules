@@ -8,16 +8,17 @@ import CodeBlock from '@theme/CodeBlock';
 
 # Pros and Cons Analysis Prompt
 
-A structured prompt for evaluating solutions with comprehensive pros/cons analysis.
+A structured prompt for evaluating solutions with scored dimensions, side-by-side comparison, and a clear recommendation.
 
 ## Overview
 
 This prompt enables GitHub Copilot to:
 
 - Analyze proposed solutions for strengths and weaknesses
-- Consider alternative approaches
+- Score solutions across relevant dimensions (complexity, performance, scalability, maintainability, security, cost)
+- Compare alternatives in a side-by-side table
 - Highlight best practices and common pitfalls
-- Provide security-focused insights
+- Provide a concrete recommendation with trade-off justification
 
 ## Visual Indicators
 
@@ -27,6 +28,7 @@ The analysis uses emojis for clarity:
 - ✨ Best practices
 - ☝️ Common pitfalls
 - 🔒 Security considerations
+- ⚖️ Trade-offs
 
 ## Prompt Source
 
