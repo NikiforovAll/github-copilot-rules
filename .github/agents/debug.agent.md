@@ -1,5 +1,5 @@
 ---
-name: Debug
+name: debug
 description: 'Debug your application to find and fix a bug'
 argument-hint: Error message, failed test, or unexpected behavior
 ---

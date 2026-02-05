@@ -1,5 +1,5 @@
 ---
-name: Spec
+name: spec
 description: Interview user to create or refine specification document
 argument-hint: Feature or system to specify (or empty for open interview)
 handoffs:

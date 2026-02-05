@@ -1,5 +1,5 @@
 ---
-name: Differ
+name: differ
 description: Analyze differences between git branches and summarize code changes. Use for clear, concise summaries of branch differences.
 argument-hint: Target branch to diff against (defaults to develop)
 ---

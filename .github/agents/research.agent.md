@@ -1,5 +1,5 @@
 ---
-name: Research
+name: research
 description: Researches topics in depth with comprehensive source analysis and synthesis
 argument-hint: Topic, question, or comparison to research
 handoffs:

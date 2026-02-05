@@ -5,11 +5,9 @@ title: GitHub Copilot Handbook
 ---
 
 import HeroBanner from '@site/src/components/HeroBanner';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 <HeroBanner />
 
-<HomepageFeatures />
 
 ## Resources
 

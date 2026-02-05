@@ -1,5 +1,5 @@
 ---
-name: Code Review
+name: codeReview
 description: Perform a thorough code review with prioritized, actionable feedback
 argument-hint: Files, branch, or focus area to review
 ---

@@ -1,5 +1,5 @@
 ---
-name: Reflect
+name: reflect
 description: Create reflective analysis of AI coding session for continuous improvement
 argument-hint: Name or topic of the session to reflect on
 ---
