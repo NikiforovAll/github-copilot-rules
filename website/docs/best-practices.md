@@ -9,7 +9,7 @@ A guide to effective development patterns and techniques using GitHub Copilot.
 
 ## 1. Planning & Problem Solving
 
-### 1.1. Explore → Plan → Code → Commit
+### 1.1. Explore → Plan → Implement → Commit
 
 - Research and understand the problem space using `@workspace` to explore the codebase
 - Create a detailed implementation plan using Copilot's **Plan Mode**
@@ -22,7 +22,18 @@ A guide to effective development patterns and techniques using GitHub Copilot.
 
 💡 Use `git worktree` for parallel development
 
-### 1.2. Spec-Driven Development
+### 1.2. Brainstorming & Ideation
+
+- Ask Copilot to brainstorm multiple approaches and iterate on ideas
+- Use generated ideas as grounding context for subsequent prompts
+- Build on previous suggestions rather than starting from scratch
+
+**When to use:** Early stages of feature design, architectural decisions, or when stuck on a problem.
+
+💡 Be very direct and explicit with the way you want to interact. E.g.: "give me 3 results and compare pros and cons for each result using markdown tables"
+
+💡 For common tasks, you can create reusable [prompts](/category/prompts) to describe your problem-solving approach. See [pros-and-cons](/customizations/prompts/pros-and-cons) for an example.
+### 1.3. Spec-Driven Development
 
 - Create a Product Requirements Document (PRD) based on user input
 - Generate tasks from the PRD
@@ -34,17 +45,6 @@ Consider using [spec-kit](https://github.com/github/spec-kit) for structured spe
 
 💡 This methodology works best with clear requirements. Be prepared to iterate and refine - feel free to discard approaches that don't work well.
 
-### 1.3. Brainstorming & Ideation
-
-- Ask Copilot to brainstorm multiple approaches and iterate on ideas
-- Use generated ideas as grounding context for subsequent prompts
-- Build on previous suggestions rather than starting from scratch
-
-**When to use:** Early stages of feature design, architectural decisions, or when stuck on a problem.
-
-💡 Be very direct and explicit with the way you want to interact. E.g.: "give me 3 results and compare pros and cons for each result using markdown tables"
-
-💡 For common tasks, you can create reusable [prompts](/category/prompts) to describe your problem-solving approach. See [pros-and-cons](/customizations/prompts/pros-and-cons) for an example.
 
 ## 2. Context Engineering
 
@@ -84,7 +84,7 @@ GitHub Copilot uses instruction files for project-wide context:
 
 💡 Be aware of context limits and how they may impact response quality. It is better to keep your context short and focused.
 
-## 3. Customization Overview
+## 3. Use Customizations Effectively
 
 GitHub Copilot can be customized through several mechanisms:
 
