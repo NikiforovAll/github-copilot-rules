@@ -1,7 +1,7 @@
 ---
 name: Code Review
 description: Perform a thorough code review with prioritized, actionable feedback
-argument-hint: "[branch, PR, or focus area]"
+argument-hint: Files, branch, or focus area to review
 ---
 
 ## Code Review Expert: Detailed Analysis and Best Practices

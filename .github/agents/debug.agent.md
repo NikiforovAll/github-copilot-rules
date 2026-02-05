@@ -1,8 +1,7 @@
 ---
 name: Debug
 description: 'Debug your application to find and fix a bug'
-argument-hint: "[error message, test name, or symptom description]"
-tools: ['edit/editNotebook', 'edit/newJupyterNotebook', 'runNotebooks', 'search', 'runCommands', 'runTasks', 'usages', 'problems', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'todos', 'runSubagent']
+argument-hint: Error message, failed test, or unexpected behavior
 ---
 
 # Debug Mode Instructions

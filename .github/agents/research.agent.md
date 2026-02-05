@@ -1,8 +1,7 @@
 ---
 name: Research
 description: Researches topics in depth with comprehensive source analysis and synthesis
-argument-hint: What topic or question would you like researched?
-tools: ['search', 'new', 'Azure MCP/search', 'runSubagent', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'fetch', 'githubRepo']
+argument-hint: Topic, question, or comparison to research
 handoffs:
   - label: Save Research
     agent: agent

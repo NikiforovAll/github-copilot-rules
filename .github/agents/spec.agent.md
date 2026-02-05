@@ -1,7 +1,7 @@
 ---
 name: Spec
 description: Interview user to create or refine specification document
-argument-hint: "[context or initial description]"
+argument-hint: Feature or system to specify (or empty for open interview)
 handoffs:
   - label: Create Plan
     agent: agent

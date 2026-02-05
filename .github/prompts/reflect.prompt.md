@@ -1,7 +1,7 @@
 ---
-name: reflect
+name: Reflect
 description: Create reflective analysis of AI coding session for continuous improvement
-argument-hint: "[session-name]"
+argument-hint: Name or topic of the session to reflect on
 ---
 
 # Session Reflection

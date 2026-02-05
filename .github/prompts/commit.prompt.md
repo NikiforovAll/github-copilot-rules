@@ -1,7 +1,7 @@
 ---
-name: commit
-description: Create a git commit with conventional commit format
-argument-hint: "[--no-verify]"
+name: Commit
+description: Create a git commit with conventional commit format and emoji
+argument-hint: Optional flags like --no-verify to skip pre-commit hooks
 ---
 
 # Commit

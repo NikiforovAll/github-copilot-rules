@@ -1,5 +1,7 @@
 ---
-description: "Pros and Cons Analysis"
+name: Pros and Cons
+description: Structured decision analysis with weighted trade-offs
+argument-hint: Decision or question to analyze
 ---
 
 # Pros and Cons Analysis
