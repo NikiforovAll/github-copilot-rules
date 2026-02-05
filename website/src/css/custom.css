@@ -47,3 +47,49 @@
 .header-github-link:hover {
   opacity: 0.6;
 }
+
+/* Navbar polish */
+.navbar {
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar polish */
+.menu__link {
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.menu__link:hover {
+  background: #f0f7ff;
+  color: #0a3069;
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background: rgba(66, 148, 245, 0.12);
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Table of contents polish */
+.table-of-contents__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Markdown content polish */
+.markdown h2 {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.4rem;
+}
+
+/* Announcement bar link */
+[data-theme='dark'] div[class*='announcementBar'] {
+  background: #1f6feb;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

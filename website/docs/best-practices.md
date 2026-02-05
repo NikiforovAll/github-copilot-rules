@@ -18,9 +18,13 @@ A guide to effective development patterns and techniques using GitHub Copilot.
 
 **When to use:** New features, bug fixes, refactoring tasks. This is your daily driver for structured development.
 
-💡 Use commits as checkpoints, commit frequently. Consider using a [commit message prompt](/category/prompts) to standardize commit messages.
+:::tip
+Use commits as checkpoints, commit frequently. Consider using a [commit message prompt](/category/prompts) to standardize commit messages.
+:::
 
-💡 Use `git worktree` for parallel development
+:::tip
+Use `git worktree` for parallel development.
+:::
 
 ### 1.2. Brainstorming & Ideation
 
@@ -30,9 +34,13 @@ A guide to effective development patterns and techniques using GitHub Copilot.
 
 **When to use:** Early stages of feature design, architectural decisions, or when stuck on a problem.
 
-💡 Be very direct and explicit with the way you want to interact. E.g.: "give me 3 results and compare pros and cons for each result using markdown tables"
+:::tip
+Be very direct and explicit with the way you want to interact. E.g.: "give me 3 results and compare pros and cons for each result using markdown tables"
+:::
 
-💡 For common tasks, you can create reusable [prompts](/category/prompts) to describe your problem-solving approach. See [pros-and-cons](/customizations/prompts/pros-and-cons) for an example.
+:::tip
+For common tasks, you can create reusable [prompts](/category/prompts) to describe your problem-solving approach. See [pros-and-cons](/customizations/prompts/pros-and-cons) for an example.
+:::
 ### 1.3. Spec-Driven Development
 
 - Create a Product Requirements Document (PRD) based on user input
@@ -43,7 +51,9 @@ Consider using [spec-kit](https://github.com/github/spec-kit) for structured spe
 
 **When to use:** Greenfield projects, PoC development, pet projects
 
-💡 This methodology works best with clear requirements. Be prepared to iterate and refine - feel free to discard approaches that don't work well.
+:::tip
+This methodology works best with clear requirements. Be prepared to iterate and refine - feel free to discard approaches that don't work well.
+:::
 
 
 ## 2. Context Engineering
@@ -54,9 +64,13 @@ Consider using [spec-kit](https://github.com/github/spec-kit) for structured spe
 - Perform prior codebase/feature exploration with `@workspace` and ask Copilot to focus on relevant parts
 - Use web search and MCP servers to gather additional context and information
 
-💡 Hint Copilot in the right direction. E.g.: "Hint: you might want to check relevant tests for this functionality"
+:::tip
+Hint Copilot in the right direction. E.g.: "Hint: you might want to check relevant tests for this functionality"
+:::
 
-💡 Use [MCP servers](https://modelcontextprotocol.io/) for latest/authoritative information. E.g.: ([Microsoft Docs MCP](https://learn.microsoft.com/en-us/training/support/mcp), [Context7](https://context7.com/))
+:::info
+Use [MCP servers](https://modelcontextprotocol.io/) for latest/authoritative information. E.g.: ([Microsoft Docs MCP](https://learn.microsoft.com/en-us/training/support/mcp), [Context7](https://context7.com/))
+:::
 
 ### 2.2. Project Memory
 
@@ -82,7 +96,9 @@ GitHub Copilot uses instruction files for project-wide context:
 - **Context Control:** Keep conversations focused on a single topic or feature
 - **Manual context management:** Use `#file:` to include specific files, `@workspace` for broader context
 
-💡 Be aware of context limits and how they may impact response quality. It is better to keep your context short and focused.
+:::warning
+Be aware of context limits and how they may impact response quality. It is better to keep your context short and focused.
+:::
 
 ## 3. Use Customizations Effectively
 

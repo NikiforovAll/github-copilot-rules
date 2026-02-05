@@ -1,0 +1,112 @@
+.hero {
+  padding: 2rem 2rem 1.5rem;
+  margin: -1rem -1rem 1.5rem;
+  background: linear-gradient(135deg, #f0f7ff 0%, #dbeafe 100%);
+  border: 1px solid #bdd4ee;
+  border-radius: 12px;
+  text-align: center;
+}
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #0d1b2a 0%, #112240 100%);
+  border-color: #1f3a5f;
+}
+
+.heroTitle {
+  color: #0a3069;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+[data-theme='dark'] .heroTitle {
+  color: #e6edf3;
+}
+
+.heroSubtitle {
+  color: #424a53;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: #8b949e;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heroPrimary {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: #0969da;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.heroPrimary:hover {
+  background: #0860c7;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.heroSecondary {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: transparent;
+  color: #0969da;
+  border: 1px solid #0969da;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.heroSecondary:hover {
+  background: rgba(9, 105, 218, 0.08);
+  color: #0969da;
+  text-decoration: none;
+}
+
+[data-theme='dark'] .heroPrimary {
+  background: #388bfd;
+}
+
+[data-theme='dark'] .heroPrimary:hover {
+  background: #4294f5;
+}
+
+[data-theme='dark'] .heroSecondary {
+  color: #58a6ff;
+  border-color: #58a6ff;
+}
+
+[data-theme='dark'] .heroSecondary:hover {
+  background: rgba(88, 166, 255, 0.1);
+  color: #58a6ff;
+}
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .hero {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+}

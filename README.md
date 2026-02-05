@@ -1,5 +1,11 @@
 # 🤖 .NET GitHub Copilot Rules
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/nikiforovall/github-copilot-rules?style=social)](https://github.com/nikiforovall/github-copilot-rules/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/nikiforovall/github-copilot-rules)](https://github.com/nikiforovall/github-copilot-rules/commits/main)
+[![Docusaurus](https://img.shields.io/badge/Built%20with-Docusaurus-45b8d8?logo=docusaurus)](https://nikiforovall.github.io/github-copilot-rules/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fnikiforovall.github.io%2Fgithub-copilot-rules%2F&label=handbook)](https://nikiforovall.github.io/github-copilot-rules/)
+
 A collection of [GitHub Copilot AI rules](https://code.visualstudio.com/docs/copilot/copilot-customization) for .NET development best practices.
 
 > [!TIP]

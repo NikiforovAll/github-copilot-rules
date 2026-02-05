@@ -71,9 +71,9 @@ AI assistants are input-heavy (100:1 input-to-output ratio). Structure for effic
 
 ### 6. Append-Only Context
 
-**NEVER modify previous messages.** Always append new information.
-
-Modifying previous messages invalidates internal caches and can confuse the model about what actually happened.
+:::danger
+**NEVER modify previous messages.** Always append new information. Modifying previous messages invalidates internal caches and can confuse the model about what actually happened.
+:::
 
 ---
 
@@ -81,10 +81,12 @@ Modifying previous messages invalidates internal caches and can confuse the mode
 
 ### Quality Degrades Before Limits
 
+:::warning
 Quality starts to degrade well before you hit context limits. Signs of degradation:
 - Responses become less coherent
 - Model forgets earlier context
 - Hallucinations increase
+:::
 
 ### Fresh Conversation Reset
 
@@ -198,11 +200,13 @@ _plans/
 
 ### Critical Rules
 
-1. **Store, Don't Stuff** - Large outputs go to files, not context
-2. **Log All Errors** - Every error in plan.md "Errors Encountered"
-3. **Decisions Need Rationale** - Record WHY, not just what
-4. **Update Status Immediately** - Mark phases complete as done
-5. **Refresh Goals** - Re-read plan.md after ~20+ interactions
+:::info
+1. **Store, Don't Stuff** — Large outputs go to files, not context
+2. **Log All Errors** — Every error in plan.md "Errors Encountered"
+3. **Decisions Need Rationale** — Record WHY, not just what
+4. **Update Status Immediately** — Mark phases complete as done
+5. **Refresh Goals** — Re-read plan.md after ~20+ interactions
+:::
 
 ---
 

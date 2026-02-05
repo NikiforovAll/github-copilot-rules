@@ -62,6 +62,20 @@ const config: Config = {
   },
 
   themeConfig: {
+    mermaid: {
+      theme: {light: 'base', dark: 'dark'},
+      options: {
+        themeVariables: {
+          primaryColor: '#dbeafe',
+          primaryTextColor: '#1e3a5f',
+          primaryBorderColor: '#0969da',
+          lineColor: '#0969da',
+          secondaryColor: '#f0f7ff',
+          tertiaryColor: '#e8f0fe',
+          fontFamily: 'system-ui, -apple-system, sans-serif',
+        },
+      },
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -70,6 +84,7 @@ const config: Config = {
       logo: {
         alt: 'GitHub Copilot Handbook Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
       },
       items: [
         {
@@ -89,6 +104,14 @@ const config: Config = {
           position: 'right',
         },
       ],
+    },
+    announcementBar: {
+      id: 'handbook_announcement',
+      content:
+        '⭐ If you find this handbook useful, give it a <a target="_blank" rel="noopener noreferrer" href="https://github.com/nikiforovall/github-copilot-rules">star on GitHub</a>!',
+      backgroundColor: '#0969da',
+      textColor: '#ffffff',
+      isCloseable: true,
     },
     footer: undefined,
     prism: {

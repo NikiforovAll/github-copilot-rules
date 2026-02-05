@@ -43,7 +43,9 @@ Instruction files (`.github/copilot-instructions.md`, `.github/instructions/*.in
 
 AI can reliably follow around **150-200 rules** at a time. System prompts already use some of that capacity. Every instruction you add competes for attention.
 
+:::warning
 If your instructions are a novel, AI will start ignoring things randomly.
+:::
 
 ### Project-Specific, Not Generic
 
@@ -181,7 +183,9 @@ Plan in Chat → Execute in Agent → Review → Iterate
 
 ### Restart When Looping
 
-If AI tries the same thing, fails, tries again, fails, and keeps going:
+:::danger
+If AI tries the same thing, fails, tries again, fails — **stop**. More instructions won't help.
+:::
 
 1. **Don't keep pushing** - More instructions won't help
 2. **Start fresh** - New conversation, clean context
@@ -216,7 +220,9 @@ Try different angles:
 
 ### If Output Sucks, Input Sucked
 
+:::info
 Don't blame the model. If you're getting bad results with a good model, your prompting needs work.
+:::
 
 **Focus on:**
 - How you write prompts (specific > vague)

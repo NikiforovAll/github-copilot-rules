@@ -5,12 +5,14 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
+  icon: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Custom Instructions',
+    icon: '📋',
     description: (
       <>
         Define project-specific coding guidelines, style preferences, and
@@ -20,6 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Patterns & Templates',
+    icon: '📝',
     description: (
       <>
         Create reusable patterns and templates that Copilot can use to generate
@@ -29,6 +32,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Custom Rules',
+    icon: '🛡️',
     description: (
       <>
         Set up custom rules to enforce best practices, security guidelines, and
@@ -38,10 +42,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, description}: FeatureItem) {
+function Feature({title, icon, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
+      <div className={styles.featureCard}>
+        <div className={styles.featureIcon}>{icon}</div>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>

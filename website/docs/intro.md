@@ -4,9 +4,12 @@ sidebar_position: 1
 title: GitHub Copilot Handbook
 ---
 
-# GitHub Copilot Handbook
+import HeroBanner from '@site/src/components/HeroBanner';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-Your guide to customizing and getting the most out of GitHub Copilot.
+<HeroBanner />
+
+<HomepageFeatures />
 
 ## Resources
 
@@ -64,7 +67,9 @@ Start by learning what Copilot can do and how it processes context — this is t
 
 ### Phase 2: Context Engineering & Prompting
 
+:::tip[Key Insight]
 The single most important skill for effective AI-assisted development. Poor context = poor output.
+:::
 
 5. **[Context Engineering Guide](https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide)** — Official VS Code guide: curate context → create plans → generate code.
 6. **[Context Engineering](./guides/context-engineering)** — Manus-inspired principles: filesystem as memory, plan repetition, failure traces, cache optimization.
