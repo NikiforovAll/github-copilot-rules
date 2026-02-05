@@ -47,6 +47,17 @@ Your guide to customizing and getting the most out of GitHub Copilot.
 
 ## Resources
 
-- [Best Practices](./best-practices) - Development patterns and techniques
-- [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
-- [GitHub Repository](https://github.com/nikiforovall/github-copilot-rules)
+- [subagents](https://code.visualstudio.com/docs/copilot/agents/subagents)
+- [chat-sessions](https://code.visualstudio.com/docs/copilot/chat/chat-sessions)
+- [copilot-chat-context](https://code.visualstudio.com/docs/copilot/chat/copilot-chat-context)
+- [chat-tools](https://code.visualstudio.com/docs/copilot/chat/chat-tools)
+- [agents-tutorial](https://code.visualstudio.com/docs/copilot/agents/agents-tutorial)
+- [background-agents](https://code.visualstudio.com/docs/copilot/agents/background-agents)
+- [customization/overview](https://code.visualstudio.com/docs/copilot/customization/overview)
+- [customization/prompt-files](https://code.visualstudio.com/docs/copilot/customization/prompt-files)
+- [customization/custom-agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
+- [customization/custom-skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
+
+- [context-engineering-guide](https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide)
+- [copilot-smart-actions](https://code.visualstudio.com/docs/copilot/copilot-smart-actions)
+- [reference/copilot-vscode-features](https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features)
