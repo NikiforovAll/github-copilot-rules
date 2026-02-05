@@ -1,0 +1,51 @@
+---
+title: "Spec Interview Agent"
+sidebar_position: 4
+---
+
+import SpecSource from '!!raw-loader!../../../../.github/agents/spec.agent.md'
+import CodeBlock from '@theme/CodeBlock';
+
+# Spec Interview Agent
+
+An interactive agent that conducts in-depth interviews to create specification documents, with a handoff to create implementation plans.
+
+## Overview
+
+This agent enables GitHub Copilot to:
+
+- Conduct systematic interviews to gather requirements
+- Ask non-obvious questions about edge cases, scaling, and extensibility
+- Track progress and identify gaps during the interview
+- Generate structured specification documents
+- **Hand off** to a planning agent to create implementation plans from the spec
+
+## Usage
+
+```
+@spec                                    # Start fresh interview
+@spec Build a todo app with offline     # Start with initial context
+@spec REST API for authentication       # Start with API-focused context
+```
+
+## Handoffs
+
+| Label | Target | Description |
+|-------|--------|-------------|
+| **Create Plan** | Default agent | Generates an implementation plan from the completed specification |
+
+## Output Format
+
+The final specification includes:
+- **Overview**: High-level summary
+- **Goals**: Success criteria
+- **Requirements**: Detailed requirements
+- **Edge Cases**: How they should be handled
+- **Open Questions**: Remaining items marked with [?]
+- **Notes**: Additional context from the interview
+
+## Agent Source
+
+<CodeBlock language="markdown">
+{SpecSource}
+</CodeBlock>

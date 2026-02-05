@@ -1,18 +1,18 @@
 ---
-title: "Code Review"
-sidebar_position: 1
+title: "Code Review Agent"
+sidebar_position: 5
 ---
 
-import CodeReviewSource from '!!raw-loader!../../../../.github/prompts/code-review.prompt.md'
+import CodeReviewSource from '!!raw-loader!../../../../.github/agents/code-review.agent.md'
 import CodeBlock from '@theme/CodeBlock';
 
-# Code Review Prompt
+# Code Review Agent
 
-A comprehensive prompt for performing detailed code reviews with structured feedback.
+A code review agent that acts as a senior software engineer, providing prioritized and actionable feedback.
 
 ## Overview
 
-This prompt enables GitHub Copilot to act as a senior software engineer performing code reviews with focus on:
+This agent performs code reviews with focus on:
 
 - **Critical Issues**: Security vulnerabilities, runtime errors, performance bottlenecks, memory management, threading issues
 - **Code Quality**: Language conventions, design patterns, code organization, naming, documentation, test coverage
@@ -20,12 +20,12 @@ This prompt enables GitHub Copilot to act as a senior software engineer performi
 
 ## Usage
 
-Use this prompt when reviewing git diffs or pull requests. The review output includes:
+Invoke the agent when reviewing git diffs or pull requests. The review output includes:
 - Prioritized suggestions with emojis (🔥 Critical, ⚠️ High, 🟡 Medium, 🟢 Low)
 - Review type indicators (🔧 Change, ❓ Question, ⛏️ Nitpick, ♻️ Refactor, etc.)
 - Specific file paths and code examples
 
-## Prompt Source
+## Agent Source
 
 <CodeBlock language="markdown">
 {CodeReviewSource}

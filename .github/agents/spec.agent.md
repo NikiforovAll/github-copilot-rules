@@ -1,8 +1,12 @@
 ---
-name: spec
+name: Spec
 description: Interview user to create or refine specification document
 argument-hint: "[context or initial description]"
-agent: agent
+handoffs:
+  - label: Create Plan
+    agent: agent
+    prompt: "Based on the specification above, create an implementation plan. Break it into phases with clear deliverables."
+    send: false
 ---
 
 # Specification Interview
@@ -28,6 +32,7 @@ Conduct an in-depth interview to develop a complete specification.
 - Use probing technique: start broad, then follow threads that reveal complexity
 - Let questions emerge organically from previous answers
 - Each question should deepen understanding, not just gather requirements
+- Use #search and #fetch to research relevant patterns, libraries, or prior art when needed
 
 **Progress tracking:**
 - After every 3-4 substantive answers, provide a brief summary of what you've learned
@@ -50,6 +55,7 @@ When complete, generate the final specification as a markdown document in a code
 The user can then:
 - Copy the content to their desired location (e.g., `_plans/SPEC.md`, `docs/requirements.md`)
 - Request further refinements before saving
+- Use the **Create Plan** handoff to generate an implementation plan from the spec
 
 **Specification structure:**
 ```markdown
@@ -76,6 +82,6 @@ The user can then:
 
 ## Examples
 
-- `/spec` - Start fresh interview with no context
-- `/spec Build a todo app with offline support` - Start with initial context
-- `/spec REST API for user authentication` - Start with API-focused context
+- `@spec` - Start fresh interview with no context
+- `@spec Build a todo app with offline support` - Start with initial context
+- `@spec REST API for user authentication` - Start with API-focused context

@@ -86,7 +86,7 @@ Before automating anything, define what "good" looks like for your team.
 12. **[Coding Style](./customizations/instructions/coding-style)** — Formatting and naming conventions.
 13. **[Testing (xUnit)](./customizations/instructions/testing-xunit)** — Test patterns, fixtures, assertions.
 14. **[Git Messages](./customizations/instructions/git-message)** — Commit message format and conventions.
-15. **[Code Review](./customizations/instructions/code-review)** — Code review framework and checklists.
+15. **[Code Review](./customizations/agents/code-review)** — Code review agent with prioritized feedback.
 
 ### Phase 4: Automate with Customizations
 
@@ -127,14 +127,14 @@ graph LR
 16. **[Customization Overview](https://code.visualstudio.com/docs/copilot/customization/overview)** — Understand the layering: instructions → skills → prompts → agents → MCP.
 17. **[Prompt Files](https://code.visualstudio.com/docs/copilot/customization/prompt-files)** — Learn `.prompt.md` format, then study handbook prompts:
     - [Commit](./customizations/prompts/commit) — Conventional commits with emoji categorization
-    - [Code Review](./customizations/prompts/code-review) — Prioritized review (Critical → Low)
-    - [Spec Interview](./customizations/prompts/spec) — Structured requirement gathering
     - [Pros and Cons](./customizations/prompts/pros-and-cons) — Decision analysis framework
     - [Session Reflection](./customizations/prompts/reflect) — Capture session learnings
 18. **[Custom Agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)** — Learn `.agent.md` format, then study handbook agents:
     - [Debug](./customizations/agents/debug) — 4-phase systematic debugging
     - [Research](./customizations/agents/research) — Recursive exploration with source analysis
     - [Differ](./customizations/agents/differ) — Git branch diff summaries
+    - [Spec Interview](./customizations/agents/spec) — Structured requirement gathering with plan handoff
+    - [Code Review](./customizations/agents/code-review) — Prioritized review (Critical → Low)
 19. **[Agent Skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)** — Learn `SKILL.md` format, then study handbook skills:
     - [Research](./customizations/skills/research) — Web research with citations
     - [.NET Run File](./customizations/skills/dotnet-run-file) — Execute C# scripts directly

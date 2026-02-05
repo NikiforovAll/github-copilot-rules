@@ -127,8 +127,8 @@ Prompts are reusable templates for common tasks.
 | `.github/prompts/*.prompt.md` | Repository-wide prompts |
 
 **Examples in this repo:**
-- [code-review](/customizations/prompts/code-review) - Code review workflow
-- [spec](/customizations/prompts/spec) - Specification interview
+- [code-review](/customizations/agents/code-review) - Code review agent
+- [spec](/customizations/agents/spec) - Specification interview agent
 - [pros-and-cons](/customizations/prompts/pros-and-cons) - Decision analysis
 
 ### 3.3. Agents
