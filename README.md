@@ -1,4 +1,4 @@
-# 🤖 .NET GitHub Copilot Rules
+# 🤖 GitHub Copilot Handbook
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/nikiforovall/github-copilot-rules?style=social)](https://github.com/nikiforovall/github-copilot-rules/stargazers)
