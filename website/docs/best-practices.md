@@ -127,8 +127,6 @@ Prompts are reusable templates for common tasks.
 | `.github/prompts/*.prompt.md` | Repository-wide prompts |
 
 **Examples in this repo:**
-- [code-review](/customizations/agents/code-review) - Code review agent
-- [spec](/customizations/agents/spec) - Specification interview agent
 - [pros-and-cons](/customizations/prompts/pros-and-cons) - Decision analysis
 
 ### 3.3. Agents
@@ -141,6 +139,8 @@ Agents extend Copilot with specialized capabilities for complex multi-step tasks
 - [debug](/customizations/agents/debug) - Debugging assistance
 - [research](/customizations/agents/research) - Research and exploration
 - [differ](/customizations/agents/differ) - Git branch diff analysis
+- [code-review](/customizations/agents/code-review) - Code review with prioritized feedback
+- [spec](/customizations/agents/spec) - Specification interview with plan handoff
 
 ### 3.4. Skills
 
@@ -149,7 +149,6 @@ Skills are reusable, composable capabilities with specialized knowledge.
 **Location:** `.github/skills/<skill-name>/SKILL.md`
 
 **Examples in this repo:**
-- [research](/customizations/skills/research) - Comprehensive research with source analysis
 - [dotnet-run-file](/customizations/skills/dotnet-run-file) - Run C# scripts without projects
 - [dotnet-test](/customizations/skills/dotnet-test) - Selective .NET test execution
 - [dotnet-dependency](/customizations/skills/dotnet-dependency) - NuGet dependency management

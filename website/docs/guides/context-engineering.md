@@ -69,12 +69,6 @@ AI assistants are input-heavy (100:1 input-to-output ratio). Structure for effic
 - **Append-only context** - Never modify history mid-conversation
 - **Consistent formatting** - Same structure helps caching
 
-### 6. Append-Only Context
-
-:::danger
-**NEVER modify previous messages.** Always append new information. Modifying previous messages invalidates internal caches and can confuse the model about what actually happened.
-:::
-
 ---
 
 ## Context Window Management

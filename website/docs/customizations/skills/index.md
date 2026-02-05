@@ -34,7 +34,6 @@ Skills are defined in `.github/skills/<skill-name>/SKILL.md`:
 
 | Skill | Purpose |
 |-------|---------|
-| [research](/customizations/skills/research) | Comprehensive research with source analysis |
 | [dotnet-run-file](/customizations/skills/dotnet-run-file) | Run C# scripts without project files |
 | [dotnet-test](/customizations/skills/dotnet-test) | Selective .NET test execution |
 | [dotnet-dependency](/customizations/skills/dotnet-dependency) | Investigate and manage NuGet dependencies |

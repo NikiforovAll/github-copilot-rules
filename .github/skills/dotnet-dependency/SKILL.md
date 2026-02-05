@@ -1,7 +1,6 @@
 ---
 name: dotnet-dependency
 description: This skill should be used when investigating .NET project dependencies, understanding why packages are included, listing references, or auditing for outdated/vulnerable packages.
-allowed-tools: Bash(dotnet nuget why:*), Bash(dotnet list:*), Bash(dotnet outdated:*), Bash(dotnet package search:*), Bash(dotnet add package:*), Bash(dotnet remove package:*), Bash(dotnet tool:*), Read, Grep, Glob
 ---
 
 # .NET Dependencies

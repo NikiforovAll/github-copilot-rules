@@ -136,7 +136,6 @@ graph LR
     - [Spec Interview](./customizations/agents/spec) — Structured requirement gathering with plan handoff
     - [Code Review](./customizations/agents/code-review) — Prioritized review (Critical → Low)
 19. **[Agent Skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)** — Learn `SKILL.md` format, then study handbook skills:
-    - [Research](./customizations/skills/research) — Web research with citations
     - [.NET Run File](./customizations/skills/dotnet-run-file) — Execute C# scripts directly
     - [.NET Test](./customizations/skills/dotnet-test) — Selective test execution
     - [.NET Dependency](./customizations/skills/dotnet-dependency) — NuGet dependency management

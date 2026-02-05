@@ -1,7 +1,6 @@
 ---
 name: dotnet-test
 description: This skill should be used when running .NET tests selectively with a build-first, test-targeted workflow. Use it for running tests with xUnit focus.
-allowed-tools: Bash(dotnet build:*), Bash(dotnet test:*), Read, Grep, Glob
 ---
 
 # .NET Test Runner
