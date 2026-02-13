@@ -88,8 +88,13 @@ const config: Config = {
       },
       items: [
         {
-          to: '/',
-          label: 'Getting Started',
+          to: '/category/fundamentals',
+          label: 'Fundamentals',
+          position: 'left',
+        },
+        {
+          to: '/category/guides',
+          label: 'Guides',
           position: 'left',
         },
         {

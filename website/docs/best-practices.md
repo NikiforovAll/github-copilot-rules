@@ -1,185 +1,59 @@
 ---
-sidebar_position: 2
-title: Best Practices
+sidebar_position: 3
+title: Best practices
 ---
 
-# GitHub Copilot Best Practices
+# Best practices
 
-A guide to effective development patterns and techniques using GitHub Copilot.
+Short habits that make Copilot work well. Each links to a longer article if you want the full story.
 
-## 1. Planning & Problem Solving
+## Workflow
 
-### 1.1. Explore → Plan → Implement → Commit
+![Copilot Workflow: Explore → Plan → Implement → Commit](/img/bp-workflow.png)
 
-- Research and understand the problem space using `@workspace` to explore the codebase
-- Create a detailed implementation plan using Copilot's **Plan Mode**
-- Write the code following the plan
-- Commit with descriptive messages
+**Plan before you code.** Use `@workspace` to explore, switch to [Plan Mode](/fundamentals/plan-mode) to design, implement, commit. Commits are checkpoints — make them often. `git worktree` helps when you're juggling branches.
 
-**When to use:** New features, bug fixes, refactoring tasks. This is your daily driver for structured development.
+**Brainstorm with structure.** Tell Copilot exactly how you want output: "give me 3 options, compare pros and cons in a table." The [pros-and-cons](/customizations/prompts/pros-and-cons) prompt automates this. See [prompt engineering](/fundamentals/prompt-engineering) for more on shaping responses.
 
-:::tip
-Use commits as checkpoints, commit frequently. Consider using a [commit message prompt](/category/prompts) to standardize commit messages.
-:::
+**Spec-driven for greenfield work.** For new projects or PoCs, start from a spec. The [spec agent](/customizations/agents/spec) interviews you, builds a plan, and hands it off. [spec-kit](https://github.com/github/spec-kit) adds task tracking on top.
 
-:::tip
-Use `git worktree` for parallel development.
-:::
+## Context
 
-### 1.2. Brainstorming & Ideation
+![Context Funnel: @workspace → #file: → Focused Prompt](/img/bp-context.png)
 
-- Ask Copilot to brainstorm multiple approaches and iterate on ideas
-- Use generated ideas as grounding context for subsequent prompts
-- Build on previous suggestions rather than starting from scratch
+This is the single biggest lever. Copilot can only work with what it can see.
 
-**When to use:** Early stages of feature design, architectural decisions, or when stuck on a problem.
+- Feed it relevant files with `#file:` references — don't make it guess
+- Use `@workspace` for broad exploration, then narrow down
+- Pull in external knowledge via [MCP servers](https://modelcontextprotocol.io/) when built-in context isn't enough
+- One task per chat session. Start fresh when you switch topics — stale context degrades quality fast
 
-:::tip
-Be very direct and explicit with the way you want to interact. E.g.: "give me 3 results and compare pros and cons for each result using markdown tables"
-:::
-
-:::tip
-For common tasks, you can create reusable [prompts](/category/prompts) to describe your problem-solving approach. See [pros-and-cons](/customizations/prompts/pros-and-cons) for an example.
-:::
-### 1.3. Spec-Driven Development
-
-- Create a Product Requirements Document (PRD) based on user input
-- Generate tasks from the PRD
-- Track and manage task progress
-
-Consider using [spec-kit](https://github.com/github/spec-kit) for structured spec-driven development workflows.
-
-**When to use:** Greenfield projects, PoC development, pet projects
-
-:::tip
-This methodology works best with clear requirements. Be prepared to iterate and refine - feel free to discard approaches that don't work well.
-:::
-
-
-## 2. Context Engineering
-
-### 2.1. Context Grounding
-
-- Provide relevant files and examples using `#file:` references
-- Perform prior codebase/feature exploration with `@workspace` and ask Copilot to focus on relevant parts
-- Use web search and MCP servers to gather additional context and information
-
-:::tip
-Hint Copilot in the right direction. E.g.: "Hint: you might want to check relevant tests for this functionality"
-:::
-
-:::info
-Use [MCP servers](https://modelcontextprotocol.io/) for latest/authoritative information. E.g.: ([Microsoft Docs MCP](https://learn.microsoft.com/en-us/training/support/mcp), [Context7](https://context7.com/))
-:::
-
-### 2.2. Project Memory
-
-GitHub Copilot uses instruction files for project-wide context:
-
-**Repository-level:** `.github/copilot-instructions.md`
-- **Purpose:** Team-shared context and project knowledge
-- **Content:** Architecture decisions, design patterns, coding standards
-- **Best practice:** Keep it concise but comprehensive and high-level
-
-**IDE-level:** `.github/instructions/*.instructions.md`
-- **Purpose:** Development environment specific guidance
-- **Content:** Testing conventions, coding style, editor-specific workflows
-- **Examples:** [coding-guidelines](/customizations/instructions/coding-guidelines), [testing-xunit](/customizations/instructions/testing-xunit)
-
-**Agent memory:** `AGENTS.md`
-- **Purpose:** Instructions file to fine-tune agent behavior
-- **Content:** Project-specific rules, constraints, and context for AI agents
-
-### 2.3. Session Management
-
-- **Start new chat session** - Reset conversation context when switching to a different task
-- **Context Control:** Keep conversations focused on a single topic or feature
-- **Manual context management:** Use `#file:` to include specific files, `@workspace` for broader context
+The full playbook is in [context engineering](/fundamentals/context-engineering). Read that one.
 
 :::warning
-Be aware of context limits and how they may impact response quality. It is better to keep your context short and focused.
+Context windows have hard limits. Shorter and more focused beats longer and comprehensive every time.
 :::
 
-## 3. Use Customizations Effectively
+## Customizations
 
-GitHub Copilot can be customized through several mechanisms:
+![Customization Stack: Instructions → Prompts → Agents → Skills](/img/bp-customizations.png)
 
-### 3.1. Instructions
+Copilot is configurable through [instructions, prompts, agents, and skills](/category/customizations). If you find yourself repeating the same guidance or correcting the same mistakes, encode it. That's the whole point.
 
-Instructions provide persistent context that shapes Copilot's behavior.
+Start with a `copilot-instructions.md` for team standards. Add `.instructions.md` files for specific concerns (testing conventions, coding style). Build prompts and agents as patterns emerge from your daily work.
 
-| Location | Purpose |
-|----------|---------|
-| `.github/copilot-instructions.md` | Team-shared project standards |
-| `.github/instructions/*.instructions.md` | Development environment guidance |
-| `AGENTS.md` | Agent memory and behavior tuning |
+## Working habits
 
-**Examples in this repo:**
-- [coding-guidelines](/customizations/instructions/coding-guidelines)
-- [testing-xunit](/customizations/instructions/testing-xunit)
+![Working Habits: Be Direct, Iterate, Reflect](/img/bp-habits.png)
 
-### 3.2. Prompts
+**Be direct.** Vague prompts get vague answers. State constraints, mention the tech stack, point to examples in your codebase. "Look at the tests for this module" beats "write tests."
 
-Prompts are reusable templates for common tasks.
+**Iterate, don't restart.** Get something working first, then refine. If it's going sideways, backtrack — don't keep prompting on a broken thread.
 
-| Location | Scope |
-|----------|-------|
-| `.github/prompts/*.prompt.md` | Repository-wide prompts |
-
-**Examples in this repo:**
-- [pros-and-cons](/customizations/prompts/pros-and-cons) - Decision analysis
-
-### 3.3. Agents
-
-Agents extend Copilot with specialized capabilities for complex multi-step tasks.
-
-**Location:** `.github/agents/*.agent.md`
-
-**Examples in this repo:**
-- [debug](/customizations/agents/debug) - Debugging assistance
-- [research](/customizations/agents/research) - Research and exploration
-- [differ](/customizations/agents/differ) - Git branch diff analysis
-- [code-review](/customizations/agents/code-review) - Code review with prioritized feedback
-- [spec](/customizations/agents/spec) - Specification interview with plan handoff
-
-### 3.4. Skills
-
-Skills are reusable, composable capabilities with specialized knowledge.
-
-**Location:** `.github/skills/<skill-name>/SKILL.md`
-
-**Examples in this repo:**
-- [dotnet-run-file](/customizations/skills/dotnet-run-file) - Run C# scripts without projects
-- [dotnet-test](/customizations/skills/dotnet-test) - Selective .NET test execution
-- [dotnet-dependency](/customizations/skills/dotnet-dependency) - NuGet dependency management
-
-Skills can define:
-- Specialized knowledge and workflows
-- Tool permissions via `allowed-tools`
-- Reference files for progressive disclosure
-
-## 4. Tips for Success
-
-### 4.1. Communication
-
-- Be specific about requirements and constraints
-- Provide context about your development environment
-- Ask for explanations when solutions aren't clear
-
-### 4.2. Iteration
-
-- Start with working solutions, then optimize
-- Use feedback loops to refine approaches
-- Don't hesitate to backtrack and try different methods
-
-### 4.3. Learning
-
-- Experiment with different prompt styles
-- Learn from Copilot's reasoning and explanations
-- Build a personal knowledge base of effective patterns
+**Reflect.** After a session, run [`/reflect`](/customizations/prompts/reflect) to capture what worked and what didn't. Patterns you notice can become [prompts](/category/prompts), [agents](/category/agents), or [skills](/category/skills). See [session reflection](/guides/session-reflection) for the full workflow.
 
 ## Resources
 
-- [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
-- [spec-kit](https://github.com/github/spec-kit) - Spec-driven development toolkit
-- [Model Context Protocol](https://modelcontextprotocol.io/) - MCP servers for extended context
+- [GitHub Copilot docs](https://docs.github.com/en/copilot)
+- [Model Context Protocol](https://modelcontextprotocol.io/)
+- [spec-kit](https://github.com/github/spec-kit)

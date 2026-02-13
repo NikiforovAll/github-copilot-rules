@@ -72,13 +72,13 @@ The single most important skill for effective AI-assisted development. Poor cont
 :::
 
 5. **[Context Engineering Guide](https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide)** — Official VS Code guide: curate context → create plans → generate code.
-6. **[Context Engineering](./guides/context-engineering)** — Manus-inspired principles: filesystem as memory, plan repetition, failure traces, cache optimization.
+6. **[Context Engineering](./fundamentals/context-engineering)** — Manus-inspired principles: filesystem as memory, plan repetition, failure traces, cache optimization.
 7. 📺 **[Subagents: Parallel Execution and Context Isolation](https://www.youtube.com/watch?v=GMAoTeD9siU)** — How subagents enable isolated context windows for parallel tasks.
-8. **[AI Coding Best Practices](./guides/ai-coding-best-practices)** — Plan architecture upfront, tell AI what NOT to do, use different modes strategically.
+8. **[AI Coding Best Practices](./best-practices)** — Plan architecture upfront, tell AI what NOT to do, use different modes strategically.
 9. **[Custom Instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)** — Set up `AGENTS.md` and `copilot-instructions.md`; use `/init` to bootstrap workspace guidelines.
 10. **[Prompt Engineering Guide](https://code.visualstudio.com/docs/copilot/guides/prompt-engineering-guide)** — Practical tips for writing effective prompts for inline suggestions and chat.
 11. **[Prompt Engineering for Copilot Chat](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)** — GitHub official guide: effective prompts, examples, breaking down complex tasks.
-13. **[Prompt Engineering](./guides/reasoning-strategies)** — Comprehensive guide covering fundamentals, advanced reasoning strategies (CoT, ToT, AoT, Reflexion), and best practices.
+13. **[Prompt Engineering](./fundamentals/reasoning-strategies)** — Comprehensive guide covering fundamentals, advanced reasoning strategies (CoT, ToT, AoT, Reflexion), and best practices.
 
 ### Phase 3: Define Your Standards
 
@@ -171,3 +171,7 @@ graph LR
 
 26. **[Session Reflection](./guides/session-reflection)** — Meta-analysis of how work was done, not what was built.
 27. Use `/reflect` after complex sessions → accumulate insights → extract patterns into new instructions, prompts, or skills.
+
+## External Resources
+
+> **[awesome-copilot](https://github.com/github/awesome-copilot)** — A curated list of awesome resources for GitHub Copilot.

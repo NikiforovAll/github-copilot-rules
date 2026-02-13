@@ -1,87 +1,17 @@
 ---
-sidebar_position: 2
-title: Prompt Engineering
+sidebar_position: 3
+title: Reasoning Strategies
 ---
 
-# Prompt Engineering
-
-Prompt engineering is writing instructions that get AI models to do what you actually want. Sounds simple. It's not.
-
-## What is prompt engineering?
-
-You're designing the input that guides the model's output. Good prompts reduce hallucinations by forcing explicit reasoning. They improve accuracy by giving context and examples. They control format through structure. They enable complex reasoning by breaking problems down strategically.
-
-Your prompts directly affect what you get back. A well-crafted prompt makes the difference between mediocre and exceptional results.
-
----
-
-## Fundamentals
-
-### Prompt structure
-
-Good prompts have four parts:
-
-**Identity or role** defines what the AI is:
-```
-You are an expert code reviewer focusing on security and performance.
-```
-
-**Instructions** tell it what to do:
-```
-Review this code for:
-1. Security vulnerabilities
-2. Performance bottlenecks
-3. Code quality issues
-```
-
-**Context** gives background:
-```
-This is a payment processing module handling sensitive customer data.
-```
-
-**Examples** show the pattern (few-shot learning):
-```
-Input: def add(a, b): return a + b
-Output: ✓ Simple, clear function. Consider adding type hints.
-```
-
-**Output format** (optional) specifies structure:
-```
-Return your review as JSON:
-{
-  "security_issues": [],
-  "performance_issues": [],
-  "suggestions": []
-}
-```
-
-### Zero-shot vs few-shot
-
-| Approach | Description | When to use |
-|----------|-------------|-------------|
-| Zero-shot | No examples, just instruction | Simple tasks where the model already knows the pattern |
-| Few-shot | Include 2-5 examples | Complex patterns or specific output formats |
-
-Zero-shot example:
-```
-Translate to French: "Hello, how are you?"
-```
-
-Few-shot example:
-```
-Translate to French:
-"Good morning" → "Bonjour"
-"Thank you" → "Merci"
-"Hello, how are you?" → 
-```
-
----
-
-## Advanced reasoning strategies
+# Reasoning Strategies
 
 Basic prompts work for simple tasks. For complex problems, you need reasoning strategies. These force the AI to follow specific cognitive patterns before answering.
 
 The difference is noticeable. CoT reduced errors by 40-60% in early GPT-3 tests. ToT solved problems that standard prompting failed on entirely.
+
+:::tip
+For prompt engineering fundamentals (structure, zero-shot vs few-shot, best practices), see [Prompt Engineering](prompt-engineering.md).
+:::
 
 ### Core reasoning models
 
@@ -223,7 +153,8 @@ Best for: Fact-checking, calculations, verifiable claims
 ## Strategy selection guide
 
 | If the task is... | Use strategy |
-|-------------------|--------------|| "Solve this complex equation" | CoT |
+|---|---|
+| "Solve this complex equation" | CoT |
 | "Architect a new microservice" | AoT |
 | "Give me 5 different story angles" | ToT |
 | "Make this code bug-free" | Reflexion |
@@ -280,74 +211,3 @@ then provide a revised solution.
 | Quality iteration | CoD | "Draft, then refine" |
 | Self-checking | Reflexion | "Critique your solution" |
 | High accuracy | Self-Consistent | "Try multiple times, find consensus" |
-
----
-
-## Best practices
-
-### Be specific
-
-❌ "Make this code better"
-
-✓ "Refactor this code to improve performance, add error handling, and include type hints"
-
-### Give context
-
-❌ "Fix this bug"
-
-✓ "This authentication function fails when the token expires. Fix the bug and add proper error messages."
-
-### Use delimiters
-
-XML tags, Markdown, or clear separators help:
-```markdown
-## Task
-Analyze the following code
-
-<code>
-def process_data(data):
-    return [x * 2 for x in data]
-</code>
-
-## Requirements
-- Add error handling
-- Support empty lists
-- Add docstrings
-```
-
-### Iterate
-
-Start simple, test, add complexity:
-1. Basic instruction
-2. Add examples
-3. Include constraints
-4. Specify output format
-5. Add reasoning strategy
-
-### Cache effectively
-
-Put reusable content first to leverage caching:
-```
-[REUSABLE: System instructions, guidelines, examples]
-[DYNAMIC: Specific user query]
-```
-
----
-
-## Common pitfalls
-
-| Problem | Solution |
-|---------|----------|
-| Vague instructions | Be explicit about requirements and constraints |
-| No examples | Provide 2-3 examples for complex patterns |
-| Missing context | Include relevant background information |
-| Ambiguous output format | Specify exact format (JSON, Markdown, etc.) |
-| Overloading single prompt | Break complex tasks into sequential prompts |
-
----
-
-## Resources
-
-- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Prompt Engineering Guide](https://www.promptingguide.ai/) - Comprehensive collection of techniques and papers

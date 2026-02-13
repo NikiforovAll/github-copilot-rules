@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: Plan Mode
 ---
 
@@ -163,62 +163,6 @@ If there's no automated way to verify the result, the AI can't self-correct. Bef
 :::tip Supervisory Role
 Act as a supervisor during implementation — stay engaged but let the AI work through the plan independently.
 :::
-
-### Extended workflow
-
-```mermaid
-flowchart TD
-    Start([Start]) --> Prime
-
-    subgraph S1["Stage 1 — Context Priming"]
-        Prime[Share codebase context,<br/>requirements, patterns]
-    end
-
-    subgraph S2["Stage 2 — Planning"]
-        Understand[Understand context] --> Plan[Create implementation plan]
-        Plan --> Review{Plan<br/>approved?}
-        Review -->|Revise| Plan
-    end
-
-    subgraph S3["Stage 3 — Implementation"]
-        Implement[Implement autonomously]
-        Monitor{Course correction<br/>needed?}
-        Guide[Provide guidance]
-        Implement --> Monitor
-        Monitor -->|Yes| Guide --> Implement
-    end
-
-    subgraph S4["Stage 4 — Evaluation"]
-        Verify[Verify: tests, build,<br/>E2E, scripts, self-review]
-        Pass{Verification<br/>passed?}
-        Fix[Analyze failures & fix]
-        Verify --> Pass
-        Pass -->|No| Fix --> Implement
-    end
-
-    Prime --> Understand
-    Review -->|Yes| Implement
-    Monitor -->|No| Verify
-    Pass -->|Yes| Done([Complete])
-
-    style S1 fill:#dbeafe,stroke:#0969da
-    style S2 fill:#dbeafe,stroke:#0969da
-    style S3 fill:#f0fdf4,stroke:#16a34a
-    style S4 fill:#fef3c7,stroke:#d97706
-```
-
----
-
-## When to use
-
-| Scenario | Approach |
-|----------|----------|
-| Complex multi-step features | Plan mode (or extended) |
-| Production code requiring correctness | Extended plan mode |
-| New feature with unclear requirements | Plan mode — let questions clarify scope |
-| Large refactoring across many files | Plan mode — let sub-agents map the codebase |
-| Quick bug fixes or one-liners | Skip — just do it directly |
-| Exploratory prototyping | Skip — iterate freely instead |
 
 ---
 
