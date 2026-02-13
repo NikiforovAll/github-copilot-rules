@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: State of the Art Models (Feb 2026)
 ---
 

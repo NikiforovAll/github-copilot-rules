@@ -78,17 +78,17 @@ The single most important skill for effective AI-assisted development. Poor cont
 9. **[Custom Instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)** — Set up `AGENTS.md` and `copilot-instructions.md`; use `/init` to bootstrap workspace guidelines.
 10. **[Prompt Engineering Guide](https://code.visualstudio.com/docs/copilot/guides/prompt-engineering-guide)** — Practical tips for writing effective prompts for inline suggestions and chat.
 11. **[Prompt Engineering for Copilot Chat](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)** — GitHub official guide: effective prompts, examples, breaking down complex tasks.
-12. **[Reasoning Strategies](./guides/reasoning-strategies)** — Eight named patterns (CoT, ToT, AoT, Reflexion...) and when to use each.
+13. **[Prompt Engineering](./guides/reasoning-strategies)** — Comprehensive guide covering fundamentals, advanced reasoning strategies (CoT, ToT, AoT, Reflexion), and best practices.
 
 ### Phase 3: Define Your Standards
 
 Before automating anything, define what "good" looks like for your team.
 
-13. **[Coding Guidelines](./customizations/instructions/coding-guidelines)** — C# patterns, code organization conventions.
-14. **[Coding Style](./customizations/instructions/coding-style)** — Formatting and naming conventions.
-15. **[Testing (xUnit)](./customizations/instructions/testing-xunit)** — Test patterns, fixtures, assertions.
-16. **[Git Messages](./customizations/instructions/git-message)** — Commit message format and conventions.
-17. **[Code Review](./customizations/agents/code-review)** — Code review agent with prioritized feedback.
+14. **[Coding Guidelines](./customizations/instructions/coding-guidelines)** — C# patterns, code organization conventions.
+15. **[Coding Style](./customizations/instructions/coding-style)** — Formatting and naming conventions.
+16. **[Testing (xUnit)](./customizations/instructions/testing-xunit)** — Test patterns, fixtures, assertions.
+17. **[Git Messages](./customizations/instructions/git-message)** — Commit message format and conventions.
+18. **[Code Review](./customizations/agents/code-review)** — Code review agent with prioritized feedback.
 
 ### Phase 4: Automate with Customizations
 
